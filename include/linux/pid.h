@@ -82,7 +82,7 @@ static inline struct pid *get_pid(struct pid *pid)
 extern void put_pid(struct pid *pid);
 extern struct task_struct *pid_task(struct pid *pid, enum pid_type);
 extern struct task_struct *get_pid_task(struct pid *pid, enum pid_type);
-
+extern struct task_struct *find_task_by_vpid(pid_t vnr);
 extern struct pid *get_task_pid(struct task_struct *task, enum pid_type type);
 
 /*
