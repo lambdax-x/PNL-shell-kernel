@@ -1728,6 +1728,7 @@ long _do_fork(unsigned long clone_flags,
 			init_completion(&vfork);
 			get_task_struct(p);
 		}
+		init_completion(&p->dead);
 
 		wake_up_new_task(p);
 
